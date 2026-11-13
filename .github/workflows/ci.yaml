@@ -17,10 +17,10 @@ jobs:
           MYSQL_DATABASE: bookstore_day_class
           MYSQL_USER: bookstore_app_day
           MYSQL_PASSWORD: password123!
-          MYSQL_ROOT_ROOTPASSWORD: rootpassword
+          MYSQL_ROOT_PASSWORD: rootpassword
         ports:
           - 3306:3306
-        options:
+        options: >-
           --health-cmd="mysqladmin ping -h localhost -u root -prootpassword"
           --health-interval=10s
           --health-timeout=5s
